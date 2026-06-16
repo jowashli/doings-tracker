@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://bthqiiwelqjac"]
+
+[node name="Control" type="Control" unique_id=1754899738]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TabContainer" type="TabContainer" parent="." unique_id=1927438086]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+current_tab = 0
+tabs_visible = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer" unique_id=999866401]
+layout_mode = 2
+theme_override_constants/separation = 0
+metadata/_tab_index = 0
+
+[node name="TitleBar" type="PanelContainer" parent="TabContainer/VBoxContainer" unique_id=1937230363]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/VBoxContainer/TitleBar" unique_id=872860702]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/VBoxContainer/TitleBar/MarginContainer" unique_id=1988564213]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="TabContainer/VBoxContainer/TitleBar/MarginContainer/HBoxContainer" unique_id=113161646]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Title Bar"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/VBoxContainer" unique_id=120862133]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="BlockContainer" type="VBoxContainer" parent="TabContainer/VBoxContainer/MarginContainer" unique_id=693555366]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ActionBar" type="PanelContainer" parent="TabContainer/VBoxContainer" unique_id=449001790]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/VBoxContainer/ActionBar" unique_id=362136820]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/VBoxContainer/ActionBar/MarginContainer" unique_id=677334770]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Button1" type="Button" parent="TabContainer/VBoxContainer/ActionBar/MarginContainer/HBoxContainer" unique_id=1436833290]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Button1"
+
+[node name="Button2" type="Button" parent="TabContainer/VBoxContainer/ActionBar/MarginContainer/HBoxContainer" unique_id=964740167]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Button2"
+
+[node name="Button3" type="Button" parent="TabContainer/VBoxContainer/ActionBar/MarginContainer/HBoxContainer" unique_id=597315507]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Button3"
