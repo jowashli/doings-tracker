@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://bthqiiwelqjac"]
 
-[ext_resource type="Script" uid="uid://ou47ovm850bk" path="res://scripts/BlockCreationButton.gd" id="1_0fbet"]
-[ext_resource type="Script" uid="uid://dywd54uedk3py" path="res://scripts/BlockCreationMenu.gd" id="2_62e2m"]
+[ext_resource type="Script" uid="uid://ou47ovm850bk" path="res://scripts/block/creation/BlockCreationButton.gd" id="1_0fbet"]
+[ext_resource type="Script" uid="uid://dywd54uedk3py" path="res://scripts/block/creation/BlockCreationMenu.gd" id="2_62e2m"]
+[ext_resource type="Script" uid="uid://h0cl2ew1pn2y" path="res://scripts/block/creation/BlockCreationColourInput.gd" id="3_qtu10"]
 
 [node name="Control" type="Control" unique_id=1754899738]
 layout_mode = 3
@@ -90,12 +91,13 @@ layout_mode = 2
 size_flags_horizontal = 3
 text = "Button3"
 
-[node name="BlockCreation" type="VBoxContainer" parent="MenuContainer" unique_id=1750395450 node_paths=PackedStringArray("SaveButton", "CancelButton", "TitleInput")]
+[node name="BlockCreation" type="VBoxContainer" parent="MenuContainer" unique_id=1750395450 node_paths=PackedStringArray("SaveButton", "CancelButton", "TitleInput", "ColourInput")]
 layout_mode = 2
 script = ExtResource("2_62e2m")
 SaveButton = NodePath("TitleBar/MarginContainer/HBoxContainer/SaveButton")
 CancelButton = NodePath("TitleBar/MarginContainer/HBoxContainer/CancelButton")
 TitleInput = NodePath("MarginContainer/VBoxContainer/TitleInput")
+ColourInput = NodePath("MarginContainer/VBoxContainer/ColourInput")
 metadata/_tab_index = 1
 
 [node name="TitleBar" type="PanelContainer" parent="MenuContainer/BlockCreation" unique_id=1443912172]
@@ -139,3 +141,7 @@ layout_mode = 2
 [node name="TitleInput" type="LineEdit" parent="MenuContainer/BlockCreation/MarginContainer/VBoxContainer" unique_id=2020300128]
 layout_mode = 2
 placeholder_text = "Add title"
+
+[node name="ColourInput" type="OptionButton" parent="MenuContainer/BlockCreation/MarginContainer/VBoxContainer" unique_id=963331040]
+layout_mode = 2
+script = ExtResource("3_qtu10")

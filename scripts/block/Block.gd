@@ -8,3 +8,8 @@ func set_title ( text : String ) -> void:
 
 func set_time ( text : String ) -> void:
 	TimeLabel.text = text
+
+func set_colour ( colour : Color ) -> void:
+	var cbox : StyleBoxFlat = get_theme_stylebox("panel").duplicate()
+	cbox.bg_color = colour
+	add_theme_stylebox_override("panel", cbox)
